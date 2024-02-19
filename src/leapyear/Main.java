@@ -7,24 +7,28 @@ import java.util.Scanner;
  */
 
 public class Main {
+
     public static void main(String[] args) {
-        System.out.println("Leap Year Calculation");
-        System.out.println("---------------------------------");
-        
+        Scanner input = new Scanner(System.in);
         // Year value received from the user
-        Scanner userValue = new Scanner(System.in);
-        System.out.println("year");
-        int yearValue = userValue.nextInt();
-        int leapYear = yearValue % 4;
-        
+        int yearValue;
+        System.out.print("Please enter year: ");
+        yearValue = input.nextInt();
+
         // If the year is divisible or not divisible by 4
-        switch (leapYear) {
-            case 0:
-                System.out.println("Leapyear");
-                break;
-            default:
-                System.out.println("Not Leapyear");
-                break;
+        if (yearValue % 4 == 0) {
+            if (yearValue % 100 == 0) {
+                if (yearValue % 400 == 0) {
+                    System.out.print(yearValue + " is a leapyaer");
+                } else {
+                    System.out.print(yearValue + " is a not leapyaer");
+                }
+            } else {
+                System.out.print(yearValue + " is a leapyaer");
+            }
+        } else {
+            System.out.print(yearValue + " is not a leapyaer");
         }
     }
+
 }
