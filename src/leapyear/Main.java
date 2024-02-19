@@ -19,15 +19,15 @@ public class Main {
         if (yearValue % 4 == 0) {
             if (yearValue % 100 == 0) {
                 if (yearValue % 400 == 0) {
-                    System.out.print(yearValue + " is a leapyaer");
+                    System.out.print(yearValue + " is a leapyear");
                 } else {
-                    System.out.print(yearValue + " is a not leapyaer");
+                    System.out.print(yearValue + " is a not leapyear");
                 }
             } else {
-                System.out.print(yearValue + " is a leapyaer");
+                System.out.print(yearValue + " is a leapyear");
             }
         } else {
-            System.out.print(yearValue + " is not a leapyaer");
+            System.out.print(yearValue + " is not a leapyear");
         }
     }
 
